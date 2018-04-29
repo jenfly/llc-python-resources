@@ -12516,7 +12516,8 @@ Last event 2014-12-13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Each row corresponds to a participant in an event, so for a single event there are many rows which will all have the same value in the "Event Name" column. With a single line of code, we can obtain a sorted list of all the unique event names and the number of participants at each one! Let's look at 20 largest events:</p>
+<p>Each row of the <code>events</code> table corresponds to a participant in an event, so for a single event there are many rows which will all have the same value in the "Event Name" column. With a single line of code, and no <code>for</code> loops, we can obtain a sorted list of all the event names and the number of participants for each event name!</p>
+<p>Let's check out the 20 event names with the most participants. Many of these events occurred multiple times during the year, so what we're looking at is the grand total over the year, for each event name.</p>
 
 </div>
 </div>
@@ -12554,8 +12555,8 @@ CSS Fundamentals for Beginners in Toronto                                       
 Intro to Photoshop  in Toronto                                                                             95
 Intro to HTML5 &amp; Responsive Design in Toronto                                                              94
 Intro to HTML &amp; CSS: Building a One Page Website (Victoria Edition)                                        88
-National Learn to Code Day 2014 Intro to HTML &amp; CSS: Building a Multi-Page Website (Victoria Edition)      81
 Intro to HTML &amp; CSS (Edmonton Edition)                                                                     81
+National Learn to Code Day 2014 Intro to HTML &amp; CSS: Building a Multi-Page Website (Victoria Edition)      81
 Girls Learning Code Day: Intro to HTML &amp; CSS in Victoria! (ages 8-13)                                      79
 Weekday Intro to HTML &amp; CSS: Building a Multi-Page Website in Toronto                                      78
 WordPress for Beginners  (Toronto)                                                                         76
@@ -12564,7 +12565,7 @@ Creative Coding and Data Visualization with Processing  (Toronto)               
 National Learn to Code Day 2014 Intro to HTML &amp; CSS: Building a Multi-Page Website (Vancouver Edition)     65
 Introduction to Web Design in Toronto                                                                      64
 Nov 15th: Creative Coding and Data Visualization with Processing in Toronto                                63
-Intro to HTML &amp; CSS (Saskatoon Edition)                                                                    57
+Intro to HTML &amp; CSS (Vancouver Edition)                                                                    57
 Name: Event Name, dtype: int64</pre>
 </div>
 
@@ -12685,7 +12686,7 @@ Name: Event Name, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;Ticket Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
@@ -12701,7 +12702,7 @@ Name: Event Name, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[19]:</div>
+<div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -12719,14 +12720,14 @@ Make a Donation!                             35
 Yes, I&#39;d like to register a teen girl!       34
 Register a girl (Bring Your Own Laptop)      20
 Ladies Learning Code Alumni                  17
-Register a boy! (Bring Your Own Laptop)      15
 Yes, I&#39;d like to volunteer!                  15
+Register a boy! (Bring Your Own Laptop)      15
 Register!                                    14
+Register a girl (Use Our Laptop)             10
 Register to Mentor                           10
 Register a boy (Use Our Laptop)              10
-Register a girl (Use Our Laptop)             10
-Register a Girl + Parent/Guardian             9
 Yes I&#39;d like to volunteer!                    9
+Register a Girl + Parent/Guardian             9
 Name: Ticket Type, dtype: int64</pre>
 </div>
 
@@ -12935,7 +12936,7 @@ Name: Ticket Type, dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x22f6cefdba8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1960728aba8&gt;</pre>
 </div>
 
 </div>
@@ -12998,7 +12999,7 @@ Name: Ticket Type, dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x22f6d2be438&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x19607631470&gt;</pre>
 </div>
 
 </div>
@@ -13071,7 +13072,7 @@ Name: Ticket Type, dtype: int64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now let's look at totals by gender. Looking at participants on all the events, we see that they are about 32% female, 6% male, and 62% not listed.</p>
+<p>Now let's look at totals by gender. Looking at participants in all the events, we see that they are about 32% female, 6% male, and 62% not listed.</p>
 
 </div>
 </div>
