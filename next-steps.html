@@ -11801,7 +11801,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Python-for-data-analysis">Python for data analysis<a class="anchor-link" href="#Python-for-data-analysis">&#182;</a></h2><p><i>The suggestions below are specifically geared towards folks who are already doing a lot of data analysis in Excel or Google Sheets, and are keen to switch over to Python for these tasks. If you're just learning Python for fun, or as an introduction to coding in general, the approach outlined here is probably not the best for you --- instead, you might want to keep playing around with the PyCharm setup that we used in the workshop, and exploring other resources online to learn more Python basics. And if your ultimate goal with Python is something other type of work, such as web development, the approach I describe here also might not be the best for you, and you'll want to explore some other options. If you're an avid data cruncher, then read on!</i></p>
+<h2 id="Python-for-data-analysis">Python for data analysis<a class="anchor-link" href="#Python-for-data-analysis">&#182;</a></h2><p><i>The suggestions below are specifically geared towards folks who are already doing a lot of data analysis in Excel or Google Sheets, and are keen to switch over to Python for these tasks. If you're just learning Python for fun, or as an introduction to coding in general, the approach outlined here is probably not the best for you --- instead, you might want to keep playing around with the PyCharm setup that we used in the workshop, and exploring other resources online to learn more Python basics. And if your ultimate goal with Python is some other type of usage, such as web development, the approach I describe here also might not be the best for you, and you'll want to explore some other options. If you're an avid data cruncher, then read on!</i></p>
 <p>I always say Python is like a <b>"choose your own adventure"</b> because there are many different ways of installing it, setting up your environment for coding (e.g. PyCharm vs. Jupyter notebooks), and when you're writing code there are usually many different ways to accomplish a task. This makes it very flexible and easy to do things exactly the way you want, but it can also be overwhelming when you're just starting out and don't know where to go next!</p>
 <p>Here I'm going to recommend some options based on what has worked well for me for data analysis, but this certainly isn't the only way to do things. You may find as you explore and experiment with different options, that something else works better for you, so don't feel obligated to do everything the way I've suggested here.</p>
 
@@ -12202,7 +12202,7 @@ Name: Chapter Lead(s), dtype: object</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As we did in exercise 5, we can find which chapters have co-leaders, count them, and display the city names. With <code>pandas</code> we can do this with a few lines of code and we don't need any for loops!</p>
+<p>As we did in exercise 5, we can find which chapters have co-leaders, count them, and display the city names. With <code>pandas</code> we can do this with a few lines of code and we don't need any <code>for</code> loops!</p>
 
 </div>
 </div>
@@ -12268,6 +12268,15 @@ Name: City, dtype: object</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Not needing a <code>for</code> loop actually becomes really important when you're working with big data files. Python loops are fine for small data sets like the ones we explored in the workshop, but for much bigger data they are too slow. When you use <code>pandas</code>, which is built on a library called <code>numpy</code>, the code in this library is all optimized to work much faster and more efficiently with large amounts of data, compared to a Python loop.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Example-2:-LLC-Events">Example 2: LLC Events<a class="anchor-link" href="#Example-2:-LLC-Events">&#182;</a></h4>
 </div>
 </div>
@@ -12276,7 +12285,7 @@ Name: City, dtype: object</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here we have a much bigger data set (<code>'llc-workshop-data.csv'</code>) and we can really start to see the power of <code>pandas</code>!</p>
+<p>Here we have a slightly larger data set (<code>'llc-workshop-data.csv'</code>) and we can really start to see the power of <code>pandas</code>!</p>
 <p>First we read the data into a variable <code>events</code> and see that it has 6487 rows and 11 columns.</p>
 
 </div>
@@ -12507,7 +12516,7 @@ Last event 2014-12-13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Each row corresponds to a participant in an event, so for a single event there are many rows which will all have the same value in the "Event Name" column. With a single line of code, we can display all the unique event names and the number of participants! You can scroll through the list to see them all.</p>
+<p>Each row corresponds to a participant in an event, so for a single event there are many rows which will all have the same value in the "Event Name" column. With a single line of code, we can obtain a sorted list of all the unique event names and the number of participants at each one! Let's look at 20 largest events:</p>
 
 </div>
 </div>
@@ -12517,7 +12526,7 @@ Last event 2014-12-13
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;Event Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;Event Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12545,8 +12554,8 @@ CSS Fundamentals for Beginners in Toronto                                       
 Intro to Photoshop  in Toronto                                                                             95
 Intro to HTML5 &amp; Responsive Design in Toronto                                                              94
 Intro to HTML &amp; CSS: Building a One Page Website (Victoria Edition)                                        88
-Intro to HTML &amp; CSS (Edmonton Edition)                                                                     81
 National Learn to Code Day 2014 Intro to HTML &amp; CSS: Building a Multi-Page Website (Victoria Edition)      81
+Intro to HTML &amp; CSS (Edmonton Edition)                                                                     81
 Girls Learning Code Day: Intro to HTML &amp; CSS in Victoria! (ages 8-13)                                      79
 Weekday Intro to HTML &amp; CSS: Building a Multi-Page Website in Toronto                                      78
 WordPress for Beginners  (Toronto)                                                                         76
@@ -12555,49 +12564,8 @@ Creative Coding and Data Visualization with Processing  (Toronto)               
 National Learn to Code Day 2014 Intro to HTML &amp; CSS: Building a Multi-Page Website (Vancouver Edition)     65
 Introduction to Web Design in Toronto                                                                      64
 Nov 15th: Creative Coding and Data Visualization with Processing in Toronto                                63
-Intro to HTML &amp; CSS (Vancouver Edition)                                                                    57
 Intro to HTML &amp; CSS (Saskatoon Edition)                                                                    57
-Girls Learning Code Day: Intro to HTML &amp; CSS in Winnipeg! (ages 8-13)                                      54
-Intro to HTML &amp; CSS (Montreal Edition)                                                                     53
-WordPress for Beginners (Ottawa Edition)                                                                   52
-WordPress for Beginners (Vancouver Edition)                                                                52
-Intro to JavaScript  (Montreal Edition)                                                                    51
-Intro to JavaScript in Toronto                                                                             51
-National Learn to Code Day 2014 Intro to HTML &amp; CSS: Building a Multi-Page Website (Montreal Edition)      51
-Intro to HTML &amp; CSS (Kitchener/Waterloo Edition)                                                           51
-National Learn to Code Day 2014 Intro to HTML &amp; CSS: Building a Multi-Page Website (Halifax Edition)       50
-                                                                                                         ... 
-Girls Learning Code: Generative Art with Processing                                                        14
-CSS Fundamentals for Beginners (Edmonton Edition)                                                          14
-Girls Learning Code Day: Intro to HTML &amp; CSS in Whitehorse! (ages 8-13 &amp; 13-17)                            14
-Girls Learning Code: Intro to Arduino                                                                      14
-WordPress for Beginners (St. John&#39;s)                                                                       14
-Girls Learning Code (ages 9-12): Introduction to Ruby - Toronto                                            14
-Intro to Mobile Web/ Responsive Web Design (Calgary Edition)                                               13
-Girls Learning Code Day: Intro to HTML &amp; CSS for Teens in Edmonton! (ages 13-17)                           13
-Intro to Web Design with Photoshop (Barrie Edition)                                                        13
-Intro to HTML &amp; CSS (Regina Edition)                                                                       12
-Girls Learning Code (ages 9-12): Storytelling with Multimedia - Toronto                                    12
-Kids Learning Code (ages 13-16): Sound Design with Reaper and Fmod Studio - Toronto                        11
-Kids Learning Code Game Design (London Edition)                                                            11
-Girls Learning Code: Intro to Programming with Ruby For Teens                                              11
-Girls Learning Code: CSS with Sublime Text for 9-12 year olds                                              10
-Kids Learning Code: After School Program                                                                   10
-Intro to Web Design with Photoshop (London Edition)                                                        10
-Intro to HTML5 &amp; Responsive Design (Waterloo Edition)                                                      10
-Kids Learning Code: Generative Art with Processing for Mother&#39;s Day                                         9
-Girls Learning Code Mother- Daughter HTML &amp; CSS (Saint John Edition)                                        8
-Kids Learning Code: Intro to Arduino for Father&#39;s Day                                                       8
-Kids Learning Code: Webmaking With HTML &amp; CSS for 6-8 year olds                                             7
-Kids Learning Code: Intro to Photo Editing                                                                  6
-Kids Learning Code: Game Design with Scratch ages 9-12                                                      6
-Girls Learning Code Introduction to HTML &amp; CSS for Teens (Vancouver Edition)                                6
-Kids Learning Code: Inventors After-School Program                                                          5
-Girls Learning Code: Introduction to HTML &amp; CSS for Teens (Ottawa Edition)                                  5
-National Learn to Code Day: Intro to HTML &amp; CSS in Vancouver! (ages 8-13)                                   1
-Family Information Night in Toronto                                                                         1
-Kids Learning Code PA Day: Stop Motion Animation                                                            1
-Name: Event Name, Length: 183, dtype: int64</pre>
+Name: Event Name, dtype: int64</pre>
 </div>
 
 </div>
@@ -12710,17 +12678,17 @@ Name: Event Name, Length: 183, dtype: int64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>When you were viewing the <code>'llc-workshop-data.csv'</code> file, you may have noticed there were different categories of participants in the "Ticket Type" column. Let's see what are all the different participant categories, and the total number of participants in each:</p>
+<p>When you were viewing the <code>'llc-workshop-data.csv'</code> file, you may have noticed there were different categories of participants in the "Ticket Type" column. Let's see the 20 most common participant categories, and the total number of participants in each:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;Ticket Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;Ticket Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12733,53 +12701,32 @@ Name: Event Name, Length: 183, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt output_prompt">Out[19]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Yes, I&#39;d like to attend!                                 3671
-Yes, I&#39;d like to mentor!                                 1155
-Register a Girl &amp; Parent/Guardian                         522
-Register a girl                                           261
-Register to mentor                                        198
-Register a boy!                                           172
-Register a girl!                                          150
-Register a boy                                             90
-Make a Donation!                                           35
-Yes, I&#39;d like to register a teen girl!                     34
-Register a girl (Bring Your Own Laptop)                    20
-Ladies Learning Code Alumni                                17
-Yes, I&#39;d like to volunteer!                                15
-Register a boy! (Bring Your Own Laptop)                    15
-Register!                                                  14
-Register a girl (Use Our Laptop)                           10
-Register a boy (Use Our Laptop)                            10
-Register to Mentor                                         10
-Register a Girl + Parent/Guardian                           9
-Yes I&#39;d like to volunteer!                                  9
-Yes, I&#39;d like to mentor on Monday, July 21!                 7
-Arduino Uno Board only                                      7
-Yes, I&#39;d like to mentor on Wednesday, July 23!              7
-Register a Girl &amp; Parent/Guardian + Arduino Uno Board       7
-I&#39;d like to mentor on both Monday and Wednesday             5
-Volunteer                                                   4
-Register to Volunteer                                       4
-Yes, I&#39;d like to mentor on both Monday and Wednesday!       4
-I&#39;d like to mentor on Monday, March 10th                    3
-I&#39;d like to mentor on Wednesday, March 12th                 3
-Make a donation!                                            3
-Register a boy and purchase a Jade Robot!                   3
-Register a boy (Bring Your Own Laptop)                      3
-Register a girl + pay in full!                              2
-Additional ticket                                           2
-Register a girl + pay in installments!                      1
-Register a boy + pay in full!                               1
-Register a boy + pay in installments!                       1
-RSVP for our Family Information Night                       1
-Additional Adult or Child                                   1
-Register                                                    1
+<pre>Yes, I&#39;d like to attend!                   3671
+Yes, I&#39;d like to mentor!                   1155
+Register a Girl &amp; Parent/Guardian           522
+Register a girl                             261
+Register to mentor                          198
+Register a boy!                             172
+Register a girl!                            150
+Register a boy                               90
+Make a Donation!                             35
+Yes, I&#39;d like to register a teen girl!       34
+Register a girl (Bring Your Own Laptop)      20
+Ladies Learning Code Alumni                  17
+Register a boy! (Bring Your Own Laptop)      15
+Yes, I&#39;d like to volunteer!                  15
+Register!                                    14
+Register to Mentor                           10
+Register a boy (Use Our Laptop)              10
+Register a girl (Use Our Laptop)             10
+Register a Girl + Parent/Guardian             9
+Yes I&#39;d like to volunteer!                    9
 Name: Ticket Type, dtype: int64</pre>
 </div>
 
@@ -12988,7 +12935,7 @@ Name: Ticket Type, dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2945bf7cbe0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x22f6cefdba8&gt;</pre>
 </div>
 
 </div>
@@ -13051,7 +12998,7 @@ Name: Ticket Type, dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2945c10e438&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x22f6d2be438&gt;</pre>
 </div>
 
 </div>
