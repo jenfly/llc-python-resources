@@ -13254,7 +13254,7 @@ Name: Ticket Type, dtype: int64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Sure enough, here is one participant listed for a National Learn to Code Day event, but with "Date Attending" as November 8. Let's look the first 10 rows with same Event ID, which should correspond to the same specific event:</p>
+<p>Sure enough, here is one participant listed for a National Learn to Code Day event, but with "Date Attending" as November 8. Let's check the rows that have same Event ID, which should correspond to the same specific event. Here are the first 10 of those rows:</p>
 
 </div>
 </div>
@@ -13669,7 +13669,7 @@ Name: Ticket Type, dtype: int64</pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="#top">back to top</a></p>
 <h5 id="Now,-let's-get-even-more-fancy-schmancy-to-showcase-some-of-the-superpowers-of-Python-+-pandas">Now, let's get even more fancy-schmancy to showcase some of the superpowers of Python + <code>pandas</code><a class="anchor-link" href="#Now,-let's-get-even-more-fancy-schmancy-to-showcase-some-of-the-superpowers-of-Python-+-pandas">&#182;</a></h5><p>When you were viewing the <code>'llc-workshop-data.csv'</code> file, you may have noticed that most of the names in the "Event Name" column included the name of the city, in a variety of different formats (e.g. "in Toronto", "(Toronto Edition)", "(Toronto)", " - Toronto"). This situation is typical in real world data&mdash;it's often messy and inconsistent, with two or more useful pieces of information smushed into one and no obvious way to extract those parts out of the whole. It would be nice to extract the city names, so we could analyze the data on a city-by-city basis, but how would we even do this in a spreadsheet? It is possible, but it would be quite excruciating.</p>
-<p>In Python, however, this sort of task is much, much easier. It requires knowledge of some fairly advanced concepts, but after you've learned those concepts it's pretty straightforward to apply them to a situation like this one. In the code below, I'm using "regular expressions" from the <code>re</code> library to look for text patterns that allow me to find and extract the city names.</p>
+<p>In Python, however, this sort of task is much, much easier. It requires knowledge of some fairly advanced concepts, but after you've learned those concepts it's pretty straightforward to apply them to a situation like this one. In the code below, I'm using "regular expressions" from a library called <code>re</code> to look for text patterns that allow me to find and extract the city names.</p>
 <p>The code below may look overwhelming, but as before, don't worry about trying to understand the details of it&mdash;this type of text wrangling is a pretty specialized niche of the data analysis ecosystem and may not be relevant to your work (but for any of you who do need to parse information from text data, it's nice to know that this sort of thing can be done in Python). The code is taking all the event names in our data, looking for the various patterns associated with the city names ("in Toronto", "(Toronto)", etc.) and then putting the city name and a standardized version of the event name (minus the city) into two new columns of our data table.</p>
 
 </div>
@@ -13875,7 +13875,7 @@ Name: City, dtype: int64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The city names above all make sense, so it looks like the code is working the way we want it to. Any event name where <code>parse_event_name</code> couldn't find a city, has the city set to "N/A". In the code below, we can check all those events and make sure we didn't miss anything. This was another step I used in building up my <code>parse_event_name</code> function.</p>
+<p>It looks like the code is working the way we want it to, giving us a correct list of city names. For any event name where <code>parse_event_name</code> couldn't find a city, we've set the city to "N/A". In the code below, we can check all those events and make sure we didn't miss anything. This was another step I used in building up my <code>parse_event_name</code> function.</p>
 
 </div>
 </div>
