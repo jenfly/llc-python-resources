@@ -12199,34 +12199,34 @@ Name: City, dtype: int64</pre>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Kids Learning Code PA Day: Stop Motion Animation
-Kids Learning Code: Graphic Design with Pixlr
-Girls Learning Code: Intro to Arduino
-Kids Learning Code: Webmaking With HTML &amp; CSS for 6-8 year olds
-Kids Learning Code: Intro to Arduino for Father&#39;s Day
-Kids Learning Code: Intro to Toy Hacking
+<pre>Kids Learning Code: Intro to Python For Teens
+Kids Learning Code PA Day Introduction to HTML &amp; CSS
 Kids Learning Code: Intro to Processing and Arduino for Teens
-Kids Learning Code PA Day: HTML &amp; CSS with Mozilla Thimble
-Kids Learning Code: After School Program
+Kids Learning Code: Game Design with Scratch ages 9-12
 Kids Learning Code: Introduction to Makey Makey
-Kid Learning Code: Intro to Photoshop For Teens at George Brown College
+Kids Learning Code: Generative Art with Processing for Mother&#39;s Day
 Kids Learning Code at Williamsburg Public School (ages 8-13)
-Kids Learning Code at Nelson Mandela (ages 8-13)
-Kids Learning Code PA Day: Game Design with Scratch
-Kids Learning Code: Inventors After-School Program
 Kids Learning Code: Intro to Photo Editing
 Girls Learning Code: Generative Art with Processing
-Kids Learning Code: Graphics for Games with Pixlr
-Kids Learning Code: Generative Art with Processing for Mother&#39;s Day
-Girls Learning Code: Digital Drawing at George Brown College
-Girls Learning Code: Intro to Programming with Ruby For Teens
-Kids Learning Code: Intro to Python For Teens
-Kids Learning Code: Intro to Programming with Python
-Kids Learning Code: Game Design with Scratch ages 9-12
-Kids Learning Code: Introduction to Video Creation for 6-8 year olds
-Girls Learning Code: CSS with Sublime Text for 9-12 year olds
+Kids Learning Code: After School Program
+Kids Learning Code: Inventors After-School Program
+Kids Learning Code PA Day: HTML &amp; CSS with Mozilla Thimble
+Kids Learning Code: Intro to Arduino for Father&#39;s Day
+Kids Learning Code: Graphic Design with Pixlr
+Kids Learning Code at Nelson Mandela (ages 8-13)
+Kid Learning Code: Intro to Photoshop For Teens at George Brown College
+Kids Learning Code PA Day: Stop Motion Animation
 Kids Learning Code: Making Online Games with Scratch
-Kids Learning Code PA Day Introduction to HTML &amp; CSS
+Kids Learning Code: Webmaking With HTML &amp; CSS for 6-8 year olds
+Girls Learning Code: Digital Drawing at George Brown College
+Kids Learning Code: Graphics for Games with Pixlr
+Kids Learning Code: Intro to Programming with Python
+Girls Learning Code: CSS with Sublime Text for 9-12 year olds
+Kids Learning Code: Introduction to Video Creation for 6-8 year olds
+Kids Learning Code: Intro to Toy Hacking
+Kids Learning Code PA Day: Game Design with Scratch
+Girls Learning Code: Intro to Programming with Ruby For Teens
+Girls Learning Code: Intro to Arduino
 </pre>
 </div>
 </div>
@@ -12294,24 +12294,24 @@ Intro to Drupal                                                                 
 Intro to Photoshop and Illustrator                                                                  51
 Girls Learning Code: Intro to Arduino                                                               50
 Intro to Mobile Web                                                                                 49
-July 21 &amp; 23: WordPress for Beginners                                                               47
 Ladies Learning Code Instructor &amp; Mentor Appreciation Night                                         47
+July 21 &amp; 23: WordPress for Beginners                                                               47
 Girls Learning Code Day (ages 8-13): Intro to HTML &amp; CSS                                            46
 Girls Learning Code Day: Intro to HTML &amp; CSS for Teens! (ages 13-17)                                43
 Intro to Mobile Web --&gt; HTML5 and Responsive Design                                                 38
                                                                                                   ... 
+Intro to Mobile Web --&gt; HTML5 &amp; Responsive Design                                                   16
+Kids Learning Code: Intro to Video Creation for 6-8 year olds                                       16
 Kids Learning Code (ages 6-8): Inventing with MaKey MaKey                                           16
-Kids Learning Code: Graphic Design with Pixlr                                                       16
-Girls Learning Code: Intro to Image Editing and Animation[Holiday Edition]                          16
+Kids Learning Code: Intro to Programming with Python                                                15
 Kids Learning Code (ages 6-8): Photo Editing with Pixlr                                             15
 Girls Learning Code Day: Intro to HTML &amp; CSS, NS! (ages 8-13)                                       15
-Kids Learning Code: Intro to Programming with Python                                                15
 Kid Learning Code: Intro to Photoshop For Teens at George Brown College                             15
+Girls Learning Code (ages 9-12): Intro to Ruby                                                      14
 Kids Learning Code: Intro to Processing and Arduino for Teens                                       14
+National Learn to Code Day 2014 Kids Learning Code Edition for Teens 13-16 Intro to HTML &amp; CSS      14
 Girls Learning Code: Generative Art with Processing                                                 14
 Girls Learning Code Day: Intro to HTML &amp; CSS! (ages 8-13 &amp; 13-17)                                   14
-National Learn to Code Day 2014 Kids Learning Code Edition for Teens 13-16 Intro to HTML &amp; CSS      14
-Girls Learning Code (ages 9-12): Intro to Ruby                                                      14
 Intro to Mobile Web/ Responsive Web Design                                                          13
 Girls Learning Code (ages 9-12): Storytelling with Multimedia                                       12
 Kids Learning Code (ages 13-16): Sound Design with Reaper and Fmod Studio                           11
@@ -12325,11 +12325,11 @@ Kids Learning Code: Webmaking With HTML &amp; CSS for 6-8 year olds             
 Kids Learning Code: Game Design with Scratch ages 9-12                                               6
 Girls Learning Code Intro to HTML &amp; CSS for Teens                                                    6
 Kids Learning Code: Intro to Photo Editing                                                           6
-Kids Learning Code: Inventors After-School Program                                                   5
 Girls Learning Code: Intro to HTML &amp; CSS for Teens                                                   5
-Family Information Night                                                                             1
+Kids Learning Code: Inventors After-School Program                                                   5
 Kids Learning Code PA Day: Stop Motion Animation                                                     1
 National Learn to Code Day: Intro to HTML &amp; CSS! (ages 8-13)                                         1
+Family Information Night                                                                             1
 Name: Event Name (standardized), Length: 97, dtype: int64</pre>
 </div>
 
@@ -12353,10 +12353,9 @@ Name: Event Name (standardized), Length: 97, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">events_by_city</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Quantity&#39;</span> <span class="p">:</span> <span class="s1">&#39;# Participants&#39;</span><span class="p">})</span>
-<span class="n">events_by_city</span> <span class="o">=</span> <span class="n">events_by_city</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="s1">&#39;# Participants&#39;</span><span class="p">,</span> 
-                                            <span class="n">index</span><span class="o">=</span><span class="s1">&#39;Event Name (standardized)&#39;</span><span class="p">,</span>
-                                            <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;City&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">events_by_city</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="s1">&#39;# Participants&#39;</span><span class="p">,</span> 
+                                    <span class="n">index</span><span class="o">=</span><span class="s1">&#39;Event Name (standardized)&#39;</span><span class="p">,</span>
+                                    <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;City&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
 <span class="n">events_by_city</span><span class="p">[</span><span class="s1">&#39;Total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">events_by_city</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">events_by_city</span> <span class="o">=</span> <span class="n">events_by_city</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Total&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">events_by_city</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -12686,9 +12685,8 @@ Name: Intro to HTML &amp; CSS, dtype: float64</pre>
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">monthly_city</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Quantity&#39;</span> <span class="p">:</span> <span class="s1">&#39;# Participants&#39;</span><span class="p">})</span>
-<span class="n">monthly_city</span> <span class="o">=</span> <span class="n">monthly_city</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="s1">&#39;# Participants&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">&#39;City&#39;</span><span class="p">,</span>
-                                        <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">monthly_city</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="s1">&#39;# Participants&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">&#39;City&#39;</span><span class="p">,</span>
+                                  <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
 <span class="n">monthly_city</span> <span class="o">=</span> <span class="n">monthly_city</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">monthly_city</span>
 </pre></div>
