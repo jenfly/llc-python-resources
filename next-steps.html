@@ -11781,10 +11781,11 @@ div#notebook {
     <h3>Next steps and additional resources for Ladies Learning Code workshop participants</h3>
     <h4>Jennifer Walker |  jenfly (at) gmail (dot) com </h4>
 </center><ul>
-<li>This page is under active development, with frequent updates as I add more resources. </li>
-<li>All the Jupyter notebook source code and data are available in the <a href="https://github.com/jenfly/llc-python-resources">Github repo</a>. </li>
-<li>Data and examples on this page are adapted from the <a href="https://github.com/ladieslearningcode/llc-intro-to-python">workshop materials</a> from Ladies Learning Code.</li>
+<li>This page is under active development, with frequent updates as I add more resources</li>
+<li>All the Jupyter notebook source code and data are available in the <a href="https://github.com/jenfly/llc-python-resources">Github repo</a> </li>
+<li>Data and examples on this page are adapted from the <a href="https://github.com/ladieslearningcode/llc-intro-to-python">workshop materials</a> from Ladies Learning Code</li>
 </ul>
+<p><strong>Announcement (May 2018):</strong> I'm putting together a free workshop "Intro to Data Analysis in Python", which will be hosted by the PyLadies Vancouver meetup group, likely around the end of June. We'll do a brief recap of some Python basics, and then dive into some of the main components of the Python data analysis ecosystem, including Jupyter notebook, <code>numpy</code>, <code>pandas</code>, and data visualization. The workshop will be very beginner friendly&mdash;if you've attended the Ladies Learning Code Python workshop, you'll have all the background you need. If you're interested in attending, you can join the <a href="https://www.meetup.com/PyLadies-Vancouver/">PyLadies Vancouver meetup group</a> to keep up to date on announcements, or email me directly and I'll let you know when the event details are finalized.</p>
 <p><i>Please email me with any questions, comments, or suggestions. I'd love to hear from you!</i></p>
 
 </div>
@@ -11838,7 +11839,7 @@ div#notebook {
 <li><a href="https://www.codecademy.com/learn/learn-python">https://www.codecademy.com/learn/learn-python</a></li>
 <li><a href="http://thepythonguru.com/">http://thepythonguru.com/</a></li>
 </ul>
-<p>For data analysis, you'll want to develop a good understanding of Python fundamentals up to about an intermediate level. This would include delving deeper into all the topics we covered in the workshop (e.g. variables, types, <code>if</code> statements and logic, <code>for</code> loops, dictionaries, libraries, and reading from files) and additional topics such as: lists, tuples, sets, string operations, defining functions, writing to files, creating modules, namespaces and scopes, defining classes, debugging, and error handling.</p>
+<p>For data analysis, you'll want to develop a good understanding of Python fundamentals up to about an intermediate level. This would include delving deeper into all the topics we covered in the workshop (e.g. variables, types, <code>if</code> statements and logic, lists, <code>for</code> loops, dictionaries, libraries, and reading from files) and additional topics such as: string operations, tuples, sets, namespaces, defining functions, writing to files, and debugging. Depending on your Python needs, you might also want to learn about other topics such as creating modules and packages, error handling, and defining classes.</p>
 <p><a href="#top">back to top</a></p>
 
 </div>
@@ -11859,7 +11860,7 @@ div#notebook {
 <p><code>pandas</code> is a library for working with tabular (spreadsheet-like) data. It combines the number crunching power of <code>numpy</code> with the visualization power of <code>matplotlib</code> to reproduce pretty much all the spreadsheet functionality of Excel and Google Sheets, plus a whole lot more. Compared to working in spreadsheets, <code>pandas</code> makes it much easier to handle messy and missing data, merge data from many different files, filter data to work with many different subsets, quickly summarize data in graphs and pivot tables with just a few lines of code, analyze timeseries data in an intuitive way, and much more.</p>
 <p><img src="logos/ipython.jpg" width="250px"></p>
 <p><code>ipython</code> is an enhanced interactive shell for Python. During the workshop, we used the Python console in PyCharm to type in code and run it on the fly by pressing "Enter"&mdash;this interactive console is a Python "shell".  In the workshop we used the standard Python shell, which is okay for occasional interactive coding, but is quite limited. Data analysis is often a very interactive process: read in data from a file, do some calculations, show the results in a table or figure, and based on what you see in the results, do some more calculations to explore the data further, look at the results, find new directions to explore, and so on. For this type of workflow, there is an enhanced interactive shell called <code>ipython</code>, which provides many extremely useful features that are not available in the standard Python shell, such as: use <code>Tab</code> key to auto-complete names of variables, functions, and other objects; view the documentation for any function or other object by adding "?" after its name; use system shell commands (e.g. print your current directory, print the files in a directory, etc.); and much more. <code>ipython</code> also provides a kernel to connect to other programs, most notably the web-based Jupyter notebook (see <a href="#jupyter">Section 6</a>), another extremely useful program for data analysis.</p>
-<p>Python combined with 3rd party libraries like these (and many others) creates a powerful, full-featured <strong>ecosystem</strong> for data analysis. The <code>numpy</code>, <code>matplotlib</code>, and <code>pandas</code> libraries all require a solid understanding of Python fundamentals, so I recommend using some of the resources from <a href="#basics">Section 1</a>, or any others you find helpful, to keep learning and practicing until you feel <strong>comfortable with Python fundamentals, before diving into the larger Python data analysis ecosystem</strong>. However, even if you're just starting out with Python, you can do your future self a favour by setting up your computer with a development environment you can use now as you're starting out and throughout the rest of your journey into the larger ecosystem. In the next section, I'll walk you through the steps for this setup.</p>
+<p>Python combined with 3rd party libraries like these (and many others) creates a powerful, full-featured <strong>ecosystem</strong> for data analysis. The <code>numpy</code>, <code>matplotlib</code>, and <code>pandas</code> libraries all require a solid understanding of Python fundamentals, so I recommend using some of the resources from <a href="#basics">Section 1</a>, or any others you find helpful, to keep learning and practicing until you feel <strong>comfortable with Python fundamentals at a beginner level, before diving into the larger Python data analysis ecosystem</strong>. However, even if you're just starting out with Python, you can do your future self a favour by setting up your computer with a development environment you can use now as you're starting out and throughout the rest of your journey into the larger ecosystem. In the next section, I'll walk you through the steps for this setup.</p>
 <p><a href="#top">back to top</a></p>
 
 </div>
@@ -11886,16 +11887,35 @@ div#notebook {
 <h4 id="3.1-Anaconda">3.1 Anaconda<a class="anchor-link" href="#3.1-Anaconda">&#182;</a></h4><p>If data analysis is the main reason you're using Python, I recommend installing <strong>Anaconda</strong>. This free software comes with everything you need to get started with data analysis, so that whenever you're ready to dive in and start learning <code>numpy</code>, <code>matplotlib</code>, <code>pandas</code>, etc., you can do so without having to worry about the details of how to find, install, and manage all these libraries.  Anaconda is a "Python distribution", which means it includes the official Python language, like we used in the workshop, <strong>plus some extra stuff</strong>:</p>
 <ul>
 <li>all the most common 3rd party libraries for data analysis are pre-installed so you don't need to install them yourself, and </li>
-<li>it includes a package manager that you can use if you need to install any additional libraries.</li>
+<li>it includes a package manager (<code>conda</code>) that you can use if you need to install any additional libraries.</li>
 </ul>
 <p><img src="logos/anaconda.png" width="200px"></p>
-<p>You can download Anaconda here: <a href="https://www.anaconda.com/download/">https://www.anaconda.com/download/</a>. You'll need to select either the latest Python 3 version (currently Python 3.6) or Python 2.7&mdash;here's the first choice in the choose your own adventure! Either one is fine. I recommend selecting the latest Python 3 unless you already know that you need Python 2.7 for some reason. You can always install another Python version later if you need it, and multiple versions can co-exist peacefully in virtual environments in Anaconda without interfering with each other.</p>
-<ul>
-<li>Installation instructions for Windows: <a href="https://docs.anaconda.com/anaconda/install/windows">https://docs.anaconda.com/anaconda/install/windows</a></li>
-<li>Installation instructions for Mac: <a href="https://docs.anaconda.com/anaconda/install/mac-os">https://docs.anaconda.com/anaconda/install/mac-os</a></li>
-</ul>
-<p>You'll need about <strong>3 GB of free disk space</strong> to install Anaconda. If disk space is an issue, there is another option here: <a href="https://conda.io/miniconda.html">https://conda.io/miniconda.html</a>. This is a bare bones installation requiring very little disk space, but it is a bit more complicated because you would then need to install whatever libraries you need yourself.</p>
+<p>When you download Anaconda, you'll need to select either the latest Python 3 version (currently Python 3.6) or Python 2.7&mdash;here's the first choice in the choose your own adventure! Either one is fine. I recommend selecting the latest Python 3 unless you already know that you need Python 2.7 for some reason. You can always install another Python version later if you need it, and multiple versions can co-exist peacefully in virtual environments in Anaconda without interfering with each other.</p>
+<p>There are two options for installing Anaconda on your system:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Option-A:-Easiest-but-requires-more-disk-space">Option A: Easiest but requires more disk space<a class="anchor-link" href="#Option-A:-Easiest-but-requires-more-disk-space">&#182;</a></h5><p>You can download the <a href="https://www.anaconda.com/download/">full Anaconda distribution</a> and follow the installation instructions for <a href="https://docs.anaconda.com/anaconda/install/windows">Windows</a> or <a href="https://docs.anaconda.com/anaconda/install/mac-os">Mac</a>.
+You'll need about <strong>3 GB of free disk space</strong> to install the full Anaconda distribution. If disk space isn't an issue, this is the easiest approach to getting started with Anaconda, and you'll immediately have access to all the main data analysis libraries without having to install them yourself. Once you've installed Anaconda, look for a new program called "Anaconda Prompt" on your computer's menu, and run it to bring up a console window as in the screenshot below. You can type <code>conda list</code> at the prompt to show what libraries have been installed (it's a long list, so you'll need to scroll up to see the beginning of it). Yours will look a little different from the screenshot because the version numbers will likely be different and I have some extra libraries in Anaconda on my computer. If you scroll through your list, you should be able to spot <code>ipython</code>, <code>matplotlib</code>, <code>numpy</code>, and <code>pandas</code>, among many others.</p>
+<p><img src="screenshots/anaconda_full.png" width="800px"></img></p>
 <p>Once you've gone through this process to set up your computer with Anaconda, the great thing is that you'll have <strong>all the main data analysis libraries immediately available whenever you're ready to dive into them</strong>. You won't need to go searching around for the libraries you need and installing them yourself&mdash;they're already installed and ready for you!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Option-B:-Minimal-disk-space-but-requires-some-additional-(not-too-hard)-steps">Option B: Minimal disk space but requires some additional (not too hard) steps<a class="anchor-link" href="#Option-B:-Minimal-disk-space-but-requires-some-additional-(not-too-hard)-steps">&#182;</a></h5><p>If disk space is an issue, you can instead install <a href="https://conda.io/miniconda.html">Miniconda</a>. Unlike the full Anaconda distribution, Miniconda is a bare bones installation that includes just Python, the <code>conda</code> package manager, and a few libraries that <code>conda</code> needs, without automatically installing all the other data analysis libraries. Once you've installed Miniconda, you can see what libraries are included by following the instructions listed above in Option A to open an Anaconda Prompt console and type <code>conda list</code>. The list will be pretty short.</p>
+<p>To use any other 3rd party libraries, you'll need to install them yourself with <code>conda</code>. To start out, I recommend installing a mini data analysis ecosystem, by running the command <code>conda install ipython jupyter notebook numpy pandas matplotlib seaborn</code> in the Anaconda Prompt as in the screenshot below. Follow the prompts to confirm that you want to download and install these libraries, and <code>conda</code> will do the rest for you.</p>
+<p><img src="screenshots/miniconda.png" width="800px"></img></p>
+<p>Then you can type <code>conda list</code> again at the prompt, and confirm that the new libraries have been installed. As you continue to explore Python and want to try out more libraries, you can install them using the <code>conda install</code> command in the Anaconda Prompt.</p>
 <p><a href="#top">back to top</a></p>
 
 </div>
@@ -11906,7 +11926,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="ipython"></a></p>
-<h4 id="3.2-IPython-shell-in-Anaconda">3.2 IPython shell in Anaconda<a class="anchor-link" href="#3.2-IPython-shell-in-Anaconda">&#182;</a></h4><p>After you've installed Anaconda, you can start using the IPython shell instead of the standard Python shell, for a much nicer interactive experience. To run the IPython shell, look for a newly installed program called "Anaconda Prompt" on your computer's program menu, and run it. A console window will pop up, and at the command prompt, type <code>ipython</code> and press Enter. You'll then find yourself in a shell that looks similar to the one we used in PyCharm:</p>
+<h4 id="3.2-IPython-shell-in-Anaconda">3.2 IPython shell in Anaconda<a class="anchor-link" href="#3.2-IPython-shell-in-Anaconda">&#182;</a></h4><p>After you've installed Anaconda, you can start using the IPython shell instead of the standard Python shell, for a much nicer interactive experience. To run the IPython shell, open an Anaconda Prompt console (see instructions in the previous section). At the command prompt, type <code>ipython</code> and press Enter. You'll then find yourself in a shell that looks similar to the one we used in PyCharm:</p>
 <p><img src="screenshots/ipython1.png" width="800px"></img></p>
 
 </div>
