@@ -11785,7 +11785,7 @@ div#notebook {
 <li>All the Jupyter notebook source code and data are available in the <a href="https://github.com/jenfly/llc-python-resources">Github repo</a> </li>
 <li>Data and examples on this page are adapted from the <a href="https://github.com/ladieslearningcode/llc-intro-to-python">workshop materials</a> from Ladies Learning Code</li>
 </ul>
-<p><strong>Announcement (May 2018):</strong> I'm putting together a free workshop "Intro to Data Analysis in Python", which will be hosted by the PyLadies Vancouver meetup group, likely around the end of June. We'll do a brief recap of some Python basics, and then dive into some of the main components of the Python data analysis ecosystem, including Jupyter notebook, <code>pandas</code> library, and data visualization. The workshop will be very beginner friendly&mdash;if you've attended the Ladies Learning Code Python workshop, you'll have all the background you need. If you're interested in attending, you can join the <a href="https://www.meetup.com/PyLadies-Vancouver/">PyLadies Vancouver meetup group</a> to keep up to date on announcements, or email me directly and I'll let you know when the event details are finalized.</p>
+<p><strong>Announcement (May 2018):</strong> I'm putting together a free workshop "Intro to Data Analysis in Python", which will be hosted by the PyLadies Vancouver meetup group, likely in early July. We'll do a brief recap of some Python basics, and then dive into some of the main components of the Python data analysis ecosystem, including Jupyter notebook, <code>pandas</code> library, and data visualization. The workshop will be very beginner friendly&mdash;if you've attended the Ladies Learning Code Python workshop, you'll have all the background you need. If you're interested in attending, you can join the <a href="https://www.meetup.com/PyLadies-Vancouver/">PyLadies Vancouver meetup group</a> to keep up to date on announcements, or email me directly and I'll let you know when the event details are finalized.</p>
 <p><i>Please email me with any questions, comments, or suggestions. I'd love to hear from you!</i></p>
 
 </div>
@@ -11801,8 +11801,7 @@ div#notebook {
 <li><a href="#pydata">2. Python data analysis ecosystem</a></li>
 <li><a href="#setup">3. Setting up your computer</a><ul>
 <li><a href="#anaconda">3.1 Anaconda</a></li>
-<li><a href="#ipython">3.2 IPython shell in Anaconda</a></li>
-<li><a href="#pycharm">3.3 Using Anaconda with PyCharm</a></li>
+<li><a href="#pycharm">3.2 Using Anaconda with PyCharm</a></li>
 </ul>
 </li>
 <li><a href="#pandas">4. Pandas demo</a></li>
@@ -11897,54 +11896,9 @@ div#notebook {
 </ul>
 <p><img src="logos/anaconda.png" width="200px"></p>
 <p>When you download Anaconda, you'll need to select either the latest Python 3 version (currently Python 3.6) or Python 2.7&mdash;here's the first choice in the choose your own adventure! Either one is fine. I recommend selecting the latest Python 3 unless you already know that you need Python 2.7 for some reason. You can always install another Python version later if you need it, and multiple versions can co-exist peacefully in virtual environments in Anaconda without interfering with each other.</p>
-<p>There are two options for installing Anaconda on your system:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Option-A:-Easiest-but-requires-more-disk-space">Option A: Easiest but requires more disk space<a class="anchor-link" href="#Option-A:-Easiest-but-requires-more-disk-space">&#182;</a></h5><p>You can download the <a href="https://www.anaconda.com/download/">full Anaconda distribution</a> and follow the installation instructions for <a href="https://docs.anaconda.com/anaconda/install/windows">Windows</a> or <a href="https://docs.anaconda.com/anaconda/install/mac-os">Mac</a>.
-You'll need about <strong>3 GB of free disk space</strong> to install the full Anaconda distribution. If disk space isn't an issue, this is the easiest approach to getting started with Anaconda, and you'll immediately have access to all the main data analysis libraries without having to install them yourself. Once you've installed Anaconda, look for a new program called "Anaconda Prompt" on your computer's menu, and run it to bring up a console window as in the screenshot below. You can type <code>conda list</code> at the prompt to show what libraries have been installed (it's a long list, so you'll need to scroll up to see the beginning of it). Yours will look a little different from the screenshot because the version numbers will likely be different and I have some extra libraries in Anaconda on my computer. If you scroll through your list, you should be able to spot <code>ipython</code>, <code>matplotlib</code>, <code>numpy</code>, and <code>pandas</code>, among many others.</p>
-<p><img src="screenshots/anaconda_full.png" width="800px"></img></p>
+<p>For details on installing Anaconda on your computer, please see the setup instructions from my PyLadies workshop:</p>
+<p><a href="https://jenfly.github.io/pydata-intro-workshop/SETUP">https://jenfly.github.io/pydata-intro-workshop/SETUP</a></p>
 <p>Once you've gone through this process to set up your computer with Anaconda, the great thing is that you'll have <strong>all the main data analysis libraries immediately available whenever you're ready to dive into them</strong>. You won't need to go searching around for the libraries you need and installing them yourself&mdash;they're already installed and ready for you!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Option-B:-Minimal-disk-space-but-requires-some-additional-(not-too-hard)-steps">Option B: Minimal disk space but requires some additional (not too hard) steps<a class="anchor-link" href="#Option-B:-Minimal-disk-space-but-requires-some-additional-(not-too-hard)-steps">&#182;</a></h5><p>If disk space is an issue, you can instead install <a href="https://conda.io/miniconda.html">Miniconda</a>. Unlike the full Anaconda distribution, Miniconda is a bare bones installation that includes just Python, the <code>conda</code> package manager, and a few libraries that <code>conda</code> needs, without automatically installing all the other data analysis libraries. Once you've installed Miniconda, you can see what libraries are included by following the instructions listed above in Option A to open an Anaconda Prompt console and type <code>conda list</code>. The list will be pretty short.</p>
-<p>To use any other 3rd party libraries, you'll need to install them yourself with <code>conda</code>. To start out, I recommend installing a mini data analysis ecosystem, by running the command <code>conda install ipython jupyter notebook numpy pandas matplotlib seaborn</code> in the Anaconda Prompt as in the screenshot below. Follow the prompts to confirm that you want to download and install these libraries, and <code>conda</code> will do the rest for you.</p>
-<p><img src="screenshots/miniconda.png" width="800px"></img></p>
-<p>Then you can type <code>conda list</code> again at the prompt, and confirm that the new libraries have been installed. As you continue to explore Python and want to try out more libraries, you can install them using the <code>conda install</code> command in the Anaconda Prompt.</p>
-<p><a href="#top">back to top</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a id="ipython"></a></p>
-<h4 id="3.2-IPython-shell-in-Anaconda">3.2 IPython shell in Anaconda<a class="anchor-link" href="#3.2-IPython-shell-in-Anaconda">&#182;</a></h4><p>After you've installed Anaconda, you can start using the IPython shell instead of the standard Python shell, for a much nicer interactive experience. To run the IPython shell, open an Anaconda Prompt console (see instructions in the previous section). At the command prompt, type <code>ipython</code> and press Enter. You'll then find yourself in a shell that looks similar to the one we used in PyCharm:</p>
-<p><img src="screenshots/ipython1.png" width="800px"></img></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Try typing in <code>print('Hello world!')</code> or any of the code from the workshop, to run code interactively in the shell. You can type in <code>%quickref</code> to see a list of enhanced interactive features of the shell, and experiment with them, for example try <code>print?</code>.</p>
-<p><img src="screenshots/ipython2.png" width="800px"></img></p>
-<p>Another great option for using IPython is through a web-based Jupyter notebook. For more information on IPython and Jupyter notebook, please see <a href="#jupyter">Section 6</a>.</p>
 <p><a href="#top">back to top</a></p>
 
 </div>
@@ -11955,7 +11909,7 @@ You'll need about <strong>3 GB of free disk space</strong> to install the full A
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="pycharm"></a></p>
-<h4 id="3.3-Using-Anaconda-with-PyCharm">3.3 Using Anaconda with PyCharm<a class="anchor-link" href="#3.3-Using-Anaconda-with-PyCharm">&#182;</a></h4><p>Since we used PyCharm as our development environment in the workshop, let's see how to configure it to use our newly installed Anaconda version of Python, instead of the default Python that it was using before. To do this, you need to change the <strong>project interpreter</strong>. The project interpreter is the Python program that PyCharm uses when you execute commands in the console and run scripts. You can set up PyCharm with multiple different interpreters to choose from, corresponding to different versions of Python installed on your computer.</p>
+<h4 id="3.2-Using-Anaconda-with-PyCharm">3.2 Using Anaconda with PyCharm<a class="anchor-link" href="#3.2-Using-Anaconda-with-PyCharm">&#182;</a></h4><p>Since we used PyCharm as our development environment in the workshop, let's see how to configure it to use our newly installed Anaconda version of Python, instead of the default Python that it was using before. To do this, you need to change the <strong>project interpreter</strong>. The project interpreter is the Python program that PyCharm uses when you execute commands in the console and run scripts. You can set up PyCharm with multiple different interpreters to choose from, corresponding to different versions of Python installed on your computer.</p>
 <p><img src="logos/pycharm_logo.png" width="100px"></p>
 <p>Here is a guide to setting up PyCharm to use Anaconda Python:</p>
 <p><a href="https://jenfly.github.io/llc-python-resources/pycharm-anaconda.html">https://jenfly.github.io/llc-python-resources/pycharm-anaconda.html</a></p>
