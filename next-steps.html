@@ -11800,13 +11800,13 @@ div#notebook {
 <li><a href="#pydata">2. Python data analysis ecosystem</a></li>
 <li><a href="#setup">3. Setting up your computer</a><ul>
 <li><a href="#anaconda">3.1 Anaconda</a></li>
-<li><a href="#pycharm">3.2 Using Anaconda with PyCharm</a></li>
+<li><a href="#jupyterlab">3.2 JupyterLab</a></li>
+<li><a href="#pycharm">3.3 Using PyCharm with Anaconda</a></li>
 </ul>
 </li>
 <li><a href="#pandas">4. Pandas demo</a></li>
 <li><a href="#viz">5. Data visualization demo</a></li>
-<li><a href="#jupyter">6. IPython and Jupyter notebook</a></li>
-<li><a href="#additional">7. Additional resources</a></li>
+<li><a href="#additional">6. Additional resources</a></li>
 </ul>
 
 </div>
@@ -11859,15 +11859,45 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="pydata"></a></p>
 <h2 id="2.-Python-data-analysis-ecosystem">2. Python data analysis ecosystem<a class="anchor-link" href="#2.-Python-data-analysis-ecosystem">&#182;</a></h2><p>As we saw in the workshop, Python comes with many handy built-in functions, like <code>print()</code>, <code>type()</code>, and <code>int()</code>. It also comes with some handy <strong>built-in libraries</strong> that we can use&mdash; <i>in your workshop slides, see the ones titled "Using a Library"</i>. A library (also called a "package") is a collection of Python code that is grouped together and given a name (e.g. <code>csv</code>) and after we import a library (e.g. <code>import csv</code>) we can then use all the pieces of code that are inside of it, such as functions (e.g. <code>csv.DictReader()</code>).</p>
-<p>But if you're doing some serious data crunching, you're going to need additional libraries that don't automatically come with the Python that was already on your computer (if you're on a Mac) or which you downloaded from <a href="https://www.python.org/">https://www.python.org/</a> (if you're on Windows). These are called <strong>3rd party libraries</strong>, and they're free and available for anyone to use. There are many libraries that are useful for data analysis; four of the main ones are <code>numpy</code>, <code>matplotlib</code>, <code>pandas</code>, and <code>ipython</code>.</p>
+<p>But if you're doing some serious data crunching, you're going to need additional libraries that don't automatically come with the Python that was already on your computer (if you're on a Mac) or which you downloaded from <a href="https://www.python.org/">https://www.python.org/</a> (if you're on Windows). These are called <strong>3rd party libraries</strong>, and they're free and available for anyone to use. There are many libraries that are useful for data analysis; three of the main ones are <code>numpy</code>, <code>matplotlib</code>, and <code>pandas</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="logos/numpy.jpeg" width="200px"></p>
 <p><code>numpy</code> is a numerical library that efficiently performs calculations on <strong>arrays</strong> of data. An array is a collection of variables of the same type (such as integer, float, string, etc.) that are organized into one or more dimensions. A 1-dimensional array is like a single column or row in a spreadsheet. A 2-dimensional array is like a table of rows and columns in a spreadsheet. Pretty much every data-related Python library uses <code>numpy</code> behind the scenes&mdash;it's the heart of number crunching in Python.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="logos/matplotlib.png" width="250px"></p>
 <p><code>matplotlib</code> is a data visualization library, for making graphs such as line, bar, and scatter charts, histograms, heatmaps, contour plots, and many others. It gives the user very fine control to customize all aspects of the layout and style of each graph. <code>matplotlib</code> is the oldest data visualization library in Python, and very widely used. Many newer visualization libraries use <code>matplotlib</code> behind the scenes, and build upon its features to create additional types of plots (e.g. geographic maps, advanced statistical graphs, etc.) or provide convenient sets of pre-defined styles for different aesthetic effects.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="logos/pandas_logo.png" width="300px"></p>
 <p><code>pandas</code> is a library for working with tabular (spreadsheet-like) data. It combines the number crunching power of <code>numpy</code> with the visualization power of <code>matplotlib</code> to reproduce pretty much all the spreadsheet functionality of Excel and Google Sheets, plus a whole lot more. Compared to working in spreadsheets, <code>pandas</code> makes it much easier to handle messy and missing data, merge data from many different files, filter data to work with many different subsets, quickly summarize data in graphs and pivot tables with just a few lines of code, analyze timeseries data in an intuitive way, and much more.</p>
-<p><img src="logos/ipython.jpg" width="250px"></p>
-<p><code>ipython</code> is an enhanced interactive shell for Python. During the workshop, we used the Python console in PyCharm to type in code and run it on the fly by pressing "Enter"&mdash;this interactive console is a Python "shell".  In the workshop we used the standard Python shell, which is okay for occasional interactive coding, but is quite limited. Data analysis is often a very interactive process: read in data from a file, do some calculations, show the results in a table or figure, and based on what you see in the results, do some more calculations to explore the data further, look at the results, find new directions to explore, and so on. For this type of workflow, there is an enhanced interactive shell called <code>ipython</code>, which provides many extremely useful features that are not available in the standard Python shell, such as: use <code>Tab</code> key to auto-complete names of variables, functions, and other objects; view the documentation for any function or other object by adding "?" after its name; use system shell commands (e.g. print your current directory, print the files in a directory, etc.); and much more. <code>ipython</code> also provides a kernel to connect to other programs, most notably the web-based Jupyter notebook (see <a href="#jupyter">Section 6</a>), another extremely useful program for data analysis.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Python combined with 3rd party libraries like these (and many others) creates a powerful, full-featured <strong>ecosystem</strong> for data analysis. The <code>numpy</code>, <code>matplotlib</code>, and <code>pandas</code> libraries all require a solid understanding of Python basics, so I recommend using some of the resources from <a href="#basics">Section 1</a>, or any others you find helpful, to keep learning and practicing until you feel comfortable with Python basics at a beginner level, before diving into the larger Python data analysis ecosystem. However, even if you're just starting out with Python, you can do your future self a favour by setting up your computer with a development environment you can use now as you're starting out and throughout the rest of your journey into the larger ecosystem. In the next section, I'll walk you through the steps for this setup.</p>
 <p><a href="#top">back to top</a></p>
 
@@ -11892,16 +11922,29 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="anaconda"></a></p>
-<h4 id="3.1-Anaconda">3.1 Anaconda<a class="anchor-link" href="#3.1-Anaconda">&#182;</a></h4><p>If data analysis is the main reason you're using Python, I recommend installing <strong>Anaconda</strong>. This free software comes with everything you need to get started with data analysis, so that whenever you're ready to dive in and start learning <code>numpy</code>, <code>matplotlib</code>, <code>pandas</code>, etc., you can do so without having to worry about the details of how to find, install, and manage all these libraries.  Anaconda is a "Python distribution", which means it includes the official Python language, like we used in the workshop, <strong>plus some extra stuff</strong>:</p>
+<h4 id="3.1-Anaconda">3.1 Anaconda<a class="anchor-link" href="#3.1-Anaconda">&#182;</a></h4><p>If data analysis is the main reason you're using Python, I highly recommend installing <strong>Anaconda</strong>. This free software comes with everything you need to get started with data analysis, so that whenever you're ready to dive in and start learning <code>numpy</code>, <code>matplotlib</code>, <code>pandas</code>, etc., you can do so without having to worry about the details of how to find, install, and manage all these libraries.  Anaconda is a "Python distribution", which means it includes the official Python language, like we used in the workshop, <strong>plus some extra stuff</strong>:</p>
 <ul>
 <li>all the most common 3rd party libraries for data analysis are pre-installed so you don't need to install them yourself, and </li>
 <li>it includes a package manager (<code>conda</code>) that you can use if you need to install any additional libraries and/or manage virtual environments.</li>
 </ul>
 <p><img src="logos/anaconda.png" width="200px"></p>
 <p>When you download Anaconda, you'll need to select either the latest Python 3 version (currently Python 3.6) or Python 2.7&mdash;here's the first choice in the choose your own adventure! Either one is fine. I recommend selecting the latest Python 3 unless you already know that you need Python 2.7 for some reason. You can always install another Python version later if you need it, and multiple versions can co-exist peacefully in virtual environments in Anaconda without interfering with each other.</p>
-<p>For details on installing Anaconda on your computer, please see the setup instructions from my PyLadies workshop:</p>
-<p><a href="https://jenfly.github.io/pydata-intro-workshop/SETUP">https://jenfly.github.io/pydata-intro-workshop/SETUP</a></p>
-<p>Once you've gone through this process to set up your computer with Anaconda, the great thing is that you'll have <strong>all the main data analysis libraries immediately available whenever you're ready to dive into them</strong>. You won't need to go searching around for the libraries you need and installing them yourself&mdash;they're already installed and ready for you!</p>
+<p>For details on installing Anaconda on your computer, please see the <a href="https://jenfly.github.io/pydata-intro-workshop/SETUP">setup instructions</a> from my PyLadies workshop. Once you've gone through this process to set up your computer with Anaconda, the great thing is that you'll have <strong>all the main data analysis libraries immediately available whenever you're ready to dive into them</strong>. You won't need to go searching around for the libraries you need and installing them yourself&mdash;they're already installed and ready for you!</p>
+<p><a href="#top">back to top</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="jupyterlab"></a></p>
+<h3 id="3.2-JupyterLab">3.2 JupyterLab<a class="anchor-link" href="#3.2-JupyterLab">&#182;</a></h3><p>In the workshop, we used the Python console in PyCharm to type in code and run it on the fly (interactive coding).  This console is okay for occasional interactive coding, but it is quite limited.  Data analysis is often a very interactive process: read in data from a file, do some calculations, show the results in a table or figure, and based on what you see in the results, perform additional calculations, find new directions to explore, and so on. For this type of workflow, you might find JupyterLab an easier environment to work in compared to PyCharm.</p>
+<p><img src="logos/jupyter.png" width="150px"></p>
+<p>JupyterLab is a development environment specifically designed for data analysis and scientific computing, with many enhanced features to make interactive coding much easier, and <strong>it comes pre-loaded with Anaconda</strong>, so you don't need to install any additional software to start using it.</p>
+<p>One of the most important Jupyter tools is the <strong>Jupyter notebook</strong>, where you can run Python code and also include formatted text, equations, graphs, images, and other content. It's a very handy tool in data analysis, especially when you're exploring your data and when sharing your results with others. This guide was written as a Jupyter notebook!</p>
+<p>You can edit and run Jupyter notebooks within JupyterLab. The JupyterLab environment also includes a CSV file viewer, text editor, and other useful tools. I'm putting together a <a href="https://jenfly.github.io/jupyter-quickstart/">quick-start tutorial</a> help folks quickly get up and running with JupyterLab and Jupyter notebooks&mdash;it's currently under construction but please check the link in early September 2018! You can also edit and run Jupyter notebooks from a standalone app, as demonstrated in <a href="https://medium.com/codingthesmartway-com-blog/getting-started-with-jupyter-notebook-for-python-4e7082bd5d46">this tutorial</a>.</p>
 <p><a href="#top">back to top</a></p>
 
 </div>
@@ -11912,11 +11955,8 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="pycharm"></a></p>
-<h4 id="3.2-Using-Anaconda-with-PyCharm">3.2 Using Anaconda with PyCharm<a class="anchor-link" href="#3.2-Using-Anaconda-with-PyCharm">&#182;</a></h4><p>Since we used PyCharm as our development environment in the workshop, let's see how to configure it to use our newly installed Anaconda version of Python, instead of the default Python that it was using before. To do this, you need to change the <strong>project interpreter</strong>. The project interpreter is the Python program that PyCharm uses when you execute commands in the console and run scripts. You can set up PyCharm with multiple different interpreters to choose from, corresponding to different versions of Python installed on your computer.</p>
-<p><img src="logos/pycharm_logo.png" width="100px"></p>
-<p>Here is a guide to setting up PyCharm to use Anaconda Python:</p>
-<p><a href="https://jenfly.github.io/llc-python-resources/pycharm-anaconda.html">https://jenfly.github.io/llc-python-resources/pycharm-anaconda.html</a></p>
-<p>Once you've gone through this process to set up PyCharm with Anaconda, you'll have access to all the 3rd party libraries from Anaconda when you run code within PyCharm. If everything worked correctly in the above setup, the Python console in PyCharm will also change to an IPython shell, however the extra features of IPython may not all work or they may not work quite as nicely as they do in a standalone IPython shell. For example, in PyCharm on my computer, <code>Tab</code> to auto-complete names doesn't work for me, and "?" to view documentation works, but not as nicely as in a standalone IPython shell (it spits out all the documentation at once, instead splitting it into pages to fit on the screen and letting me press Enter to advance to the next page). For this reason, I don't tend to use PyCharm for my day-to-day interactive work, but your mileage may vary!</p>
+<h4 id="3.3-Using-PyCharm-with-Anaconda">3.3 Using PyCharm with Anaconda<a class="anchor-link" href="#3.3-Using-PyCharm-with-Anaconda">&#182;</a></h4><p><img src="logos/pycharm_logo.png" width="100px"></p>
+<p>If you'd like to use PyCharm with your newly installed Anaconda version of Python, you can follow the instructions in <a href="https://jenfly.github.io/llc-python-resources/pycharm-anaconda.html">this guide</a>. Once you've gone through this process to set up PyCharm with Anaconda, you'll have access to all the 3rd party libraries from Anaconda when you run code within PyCharm.</p>
 <p><a href="#top">back to top</a></p>
 
 </div>
@@ -14373,23 +14413,11 @@ Name: Ticket Type, dtype: int64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a id="jupyter"></a></p>
-<h3 id="6.-IPython-and-Jupyter-notebook">6. IPython and Jupyter notebook<a class="anchor-link" href="#6.-IPython-and-Jupyter-notebook">&#182;</a></h3><p>As I mentioned earlier, this guide was written in Jupyter notebook. It combines text descriptions, code, graphs, and other output into a web-based "notebook", using an <code>ipython</code> kernel to provide enhanced features for interactive coding within your browser. It's a very handy tool in data analysis, especially when you're initially exploring your data and when sharing your results with others. To learn more about the useful features of <code>ipython</code>, you can check out <a href="http://ipython.readthedocs.io/en/stable/interactive/tutorial.html">this tutorial</a>.</p>
-<p>If you'd like to learn more about Jupyter notebook, you can check out <a href="https://medium.com/codingthesmartway-com-blog/getting-started-with-jupyter-notebook-for-python-4e7082bd5d46">this tutorial</a>. If you've already installed Anaconda, you can skip the installation steps listed in the tutorial, and you can launch the notebook by selecting "Jupyter notebook" from your computer's program menu, or opening the Anaconda Navigator and selecting "Jupyter notebook". If you haven't installed Anaconda, you can still try out Jupyter notebook by following the "Try it in your browser" instructions in the tutorial.</p>
-<p>For some more background on why I think <code>ipython</code> and Jupyter are so awesome for data analysis, you can check out this <a href="https://www.youtube.com/watch?v=xuNj5paMuow">great talk</a> by Fernando Perez, who was the original creator of these tools and now leads a large team of developers at Berkeley, working on all kinds of cool new features for the Jupyter project. I especially like his philosophy about "human-centered" interactive software for scientific computing and data analysis, and the ethical importance of free, open-source tools to make science accessible to folks all around the world who may not all have budgets for expensive proprietary software.</p>
-<p><a href="#top">back to top</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="additional"></a></p>
-<h3 id="7.-Additional-resources">7. Additional resources<a class="anchor-link" href="#7.-Additional-resources">&#182;</a></h3><p>When you've become comfortable with the fundamentals of Python and want to start learning <code>numpy</code>, <code>matplotlib</code>, <code>pandas</code> and other data analysis libraries, there are many resources available to choose from. Of the sites I listed in <a href="#basics">Section 1</a>, DataCamp and DataQuest both offer online courses covering these topics in depth, and there are many other online learning platforms with in-depth courses on these topics as well. You can also search for tutorials for each library to find many helpful resources.</p>
+<h3 id="6.-Additional-resources">6. Additional resources<a class="anchor-link" href="#6.-Additional-resources">&#182;</a></h3><p>When you've become comfortable with the fundamentals of Python and want to start learning <code>numpy</code>, <code>matplotlib</code>, <code>pandas</code> and other data analysis libraries, there are many resources available to choose from. Of the sites I listed in <a href="#basics">Section 1</a>, DataCamp and DataQuest both offer online courses covering these topics in depth, and there are many other online learning platforms with in-depth courses on these topics as well. You can also search for tutorials for each library to find many helpful resources.</p>
 <p>If you'd like to learn more about the Python data analysis ecosystem, such as how all the pieces fit together, which tools might be useful for you, how Python evolved into the data crunching powerhouse that it is today, and some of the challenges for new users navigating the Python world, I highly recommend this fantastic <a href="https://www.youtube.com/watch?v=DifMYH3iuFw">keynote talk by Jake VanderPlas</a> from the <a href="https://pydata.org/">PyData</a> Seattle 2017 conference.</p>
 <p>Another great resource from Jake VanderPlas is his Youtube video series "Reproducible Data Analysis in Jupyter". <a href="https://www.youtube.com/watch?v=_ZEWDGpM-vM">Part 1</a> and <a href="https://www.youtube.com/watch?v=yUNBVzQfugg">part 2</a> give a really nice demonstration of how to use <code>pandas</code> and Jupyter notebook to analyze patterns in a dataset of hourly counts of bike trips across the Fremont bridge in Seattle. If you're at a more intermediate or advanced level with Python, you might want to check out the rest of the videos in the 10-part series for all sorts of great additional tips and tricks. If you're familiar with principal component analysis and unsupervised clustering, check out <a href="https://www.youtube.com/watch?v=GtvVpHP7CLs">part 10</a> for a very neat analysis showing how the bike trip data can be used to distinguish regular weekdays from weekends, holidays, and even a big snow storm!</p>
+<p>For some more background on why I think Jupyter is so awesome for data analysis, you can check out this <a href="https://www.youtube.com/watch?v=xuNj5paMuow">great talk</a> by Fernando Perez, who was the original creator of these tools and now leads a large team of developers at Berkeley, working on all kinds of cool new features for the Jupyter project. I especially like his philosophy about "human-centered" interactive software for scientific computing and data analysis, and the ethical importance of free, open-source tools to make science accessible to folks all around the world who may not all have budgets for expensive proprietary software.</p>
 <p>I like learning from books and when I was learning Python I found <a href="https://www.amazon.ca/Python-Data-Analysis-Wrangling-IPython/dp/1491957662/">this book</a>, by Wes McKinney, creator of <code>pandas</code>, very helpful. It has a <a href="https://github.com/wesm/pydata-book">companion site</a> with data and Jupyter notebooks corresponding to all the examples in the book, so you can work through them yourself.</p>
 <p>If you really want to geek out, check out the Zen of Python <a href="https://www.python.org/dev/peps/pep-0020/">here</a> or type <code>import this</code> into the IPython shell or PyCharm console.</p>
 <p>Hopefully this guide will help you decide if Python is a good fit for the work you're doing, and if so, will help you navigate the world of Python data analysis and give you some ideas of your next steps and path forward. If you have any questions, comments, suggestions, or any other feedback, please send me an email&mdash;I'd love to hear from you. Good luck in your Python journey!</p>
